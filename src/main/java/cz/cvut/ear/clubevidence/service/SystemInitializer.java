@@ -1,7 +1,6 @@
 package cz.cvut.ear.clubevidence.service;
 
-import cz.cvut.ear.clubevidence.model.PremiumUser;
-import cz.cvut.ear.clubevidence.model.RegularUser;
+
 import cz.cvut.ear.clubevidence.model.Role;
 import cz.cvut.ear.clubevidence.model.User;
 import jakarta.annotation.PostConstruct;
@@ -49,7 +48,7 @@ public class SystemInitializer {
         if (userService.exists(ADMIN_USERNAME)) {
             return;
         }
-        final User admin = new PremiumUser();
+        final User admin = new User();
         admin.setUsername(ADMIN_USERNAME);
         admin.setFirstName("System");
         admin.setSurname("Administrator");

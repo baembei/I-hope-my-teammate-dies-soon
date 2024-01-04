@@ -8,7 +8,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @DiscriminatorColumn(name = "USER_TYPE")
 @NamedQueries({
         @NamedQuery(name = "User.findByUsername", query = "SELECT u FROM User u WHERE u.username = :username"),})
-public abstract class User extends AbstractEntity{
+public class User extends AbstractEntity{
     @Basic(optional = false)
     @Column(name = "firstname", nullable = false)
     private String firstname;
